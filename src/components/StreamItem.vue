@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import IStream from '../interfaces/IStream'
 import { formatViews } from '../util/helper'
+import TagsList from './TagsList.vue'
 
 defineProps({
     stream: {
@@ -28,10 +29,6 @@ defineProps({
                 <p>{{ stream.channel.game }}</p>
             </div>
         </div>
-        <div class="stream__item--tags">
-            <button v-for="tag in stream.tags.slice(0, 3)">
-                {{ tag.name }}
-            </button>
-        </div>
+        <TagsList class="stream__item--tags" :tags="stream.tags" />
     </a>
 </template>

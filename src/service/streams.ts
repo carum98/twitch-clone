@@ -19,6 +19,7 @@ export const getStreams = async (): Promise<IStream[]> => {
                 channel: {
                     id: item.channel.id,
                     name: item.channel.display_name,
+                    description: item.channel.description,
                     viewers: item.viewer_count,
                     thumbnail: item.channel.profile_image_url,
                     game: item.game_name,

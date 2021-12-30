@@ -29,7 +29,7 @@ app.get('/api/streams', async (req, res) => {
     await getToken()
 
     const { data } = await axios.get(`${process.env.TWITCH_URL}/streams`, {
-        params: { first: 5 },
+        params: { first: 15 },
         headers,
     })
 
