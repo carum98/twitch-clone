@@ -1,11 +1,14 @@
+<script lang="ts" setup>
+import DropdownMore from '../components/DropdownMore.vue'
+</script>
+
 <template>
     <header id="navbar">
         <section>
             <img src="/favicon.svg" alt="Twitch Clone" width="28" height="28" />
             <a>Browse</a>
-            <button class="btn-icon">
-                <span class="material-icons-outlined"> more_vert </span>
-            </button>
+
+            <DropdownMore />
         </section>
 
         <section class="search">

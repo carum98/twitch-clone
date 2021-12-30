@@ -44,6 +44,7 @@
             align-items: center;
             gap: 10px;
             margin-top: 15px;
+            cursor: pointer;
 
             img {
                 border-radius: 50%;
@@ -81,6 +82,10 @@
                     color: red;
                     font-size: 25px;
                 }
+            }
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.082);
             }
         }
     }
