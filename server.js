@@ -84,6 +84,17 @@ const getTags = async (codes) => {
     }))
 }
 
+app.get('/api/games', async (req, res) => {
+    const { data } = await axios.get(`${process.env.TWITCH_URL}/games/top`, {
+        params: {
+            first: 8,
+        },
+        headers,
+    })
+
+    res.json(data.data)
+})
+
 const getToken = async () => {
     const response = await axios.post('https://id.twitch.tv/oauth2/token', {
         client_id: process.env.CLIENT_ID,

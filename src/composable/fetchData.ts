@@ -1,10 +1,13 @@
 import { ref } from 'vue'
 import IChannel from '../interfaces/IChannel'
+import IGames from '../interfaces/IGames'
 import IStream from '../interfaces/IStream'
+import { getGames } from '../service/games'
 import { getStreams } from '../service/streams'
 
 export const channels = ref<IChannel[]>([])
 export const streams = ref<IStream[]>([])
+export const games = ref<IGames[]>([])
 
 export const fetchData = async () => {
     const response = await getStreams()
@@ -12,5 +15,6 @@ export const fetchData = async () => {
     streams.value = response
     channels.value = response.map((item: IStream) => item.channel)
 
-    console.log(channels.value)
+    const response1 = await getGames()
+    games.value = response1
 }
