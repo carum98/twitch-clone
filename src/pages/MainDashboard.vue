@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { streams } from '../composable/fetchData'
+import { streams } from '../store/fetchData'
 import StreamList from '../components/StreamList.vue'
 import GamesList from '../components/GamesList.vue'
 import CategoriesButtons from '../components/CategoriesButtons.vue'

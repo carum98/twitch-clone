@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ChannelItem from '../components/ChannelItem.vue'
-import { channels } from '../composable/fetchData'
+import { channels } from '../store/fetchData'
 
 const toggle = () => {
     document.querySelector('#app')?.classList.toggle('collapse')

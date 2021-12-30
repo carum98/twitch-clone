@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import NavBar from './layout/NavBar.vue'
 import SideBar from './layout/SideBar.vue'
-import { fetchData } from './composable/fetchData'
+import { fetchData } from './store/fetchData'
 
 fetchData()
 </script>

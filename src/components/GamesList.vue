@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { games } from '../composable/fetchData'
+import { games } from '../store/fetchData'
 import GamesItem from './GamesItem.vue'
 </script>
 
