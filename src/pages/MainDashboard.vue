@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { getStreams } from '../service/streams'
-
-const streams = await getStreams()
+import { streams } from '../composable/fetchData'
+import StreamList from '../components/StreamList.vue'
 </script>
 
 <template>
-    <pre>
-        {{ streams }}
-    </pre>
+    <StreamList :streams="streams" title="Live channels we think you’ll like" />
+
+    <StreamList :streams="streams" title="All aboard the Hype Train!" />
 </template>

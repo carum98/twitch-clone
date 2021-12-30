@@ -1,0 +1,107 @@
+.stream {
+    &__list {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    &__item {
+        width: 320px;
+        text-align: left;
+
+        text-decoration: unset;
+        color: unset;
+
+        &--thumbnail {
+            position: relative;
+
+            span {
+                position: absolute;
+                border-radius: 5px;
+                padding: 0 5px;
+                font-weight: bold;
+
+                &:nth-child(1) {
+                    top: 10px;
+                    left: 10px;
+
+                    background: red;
+                    text-transform: uppercase;
+                }
+
+                &:nth-child(2) {
+                    bottom: 10px;
+                    left: 10px;
+
+                    background: rgba(0, 0, 0, 0.466);
+                }
+            }
+
+            &:hover {
+                span,
+                img {
+                    transform: translate(5px, -3px);
+                    z-index: 1;
+                }
+
+                background: $brand;
+            }
+        }
+
+        &--info {
+            display: flex;
+
+            gap: 10px;
+
+            img {
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+            }
+
+            p {
+                width: 280px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+
+                &:nth-child(1) {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &--tags {
+            margin-left: 35px;
+            margin-top: 5px;
+
+            button {
+                border-radius: 30px;
+                padding: 5px 10px;
+                background: #323234;
+                border: none;
+                color: #c1c1c2;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__showMore {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        > div {
+            width: 100%;
+            border-bottom: 1px solid #272728;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            color: $brand;
+            background: transparent;
+            white-space: nowrap;
+        }
+    }
+}

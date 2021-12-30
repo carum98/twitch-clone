@@ -1,0 +1,46 @@
+.channel {
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+
+        img {
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
+        &--info {
+            text-align: start;
+            flex-grow: 1;
+            > span {
+                display: block;
+
+                &:nth-child(1) {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+
+                &:nth-child(2) {
+                    font-size: 14px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 100px;
+                }
+            }
+        }
+
+        &--views {
+            text-align: end;
+
+            &::before {
+                content: '•';
+                margin-right: 5px;
+                color: red;
+                font-size: 25px;
+            }
+        }
+    }
+}

@@ -2,4 +2,32 @@
     background: $bg-sidebar;
     width: $weight-sidebar;
     height: calc(100vh - $height-nav);
+
+    padding: 10px;
+
+    .sidebar {
+        &__header {
+            display: flex;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0;
+                text-transform: uppercase;
+            }
+
+            button {
+                cursor: pointer;
+                border: none;
+                color: #fff;
+                background: transparent;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
 }
