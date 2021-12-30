@@ -4,9 +4,43 @@
         'navbar navbar'
         'sidebar content';
 
-    grid-template-columns: $weight-sidebar calc(100vw - $weight-sidebar);
+    grid-template-columns: $width-sidebar calc(100vw - $width-sidebar);
 
     grid-template-rows: $height-nav calc(100vh - $height-nav);
+
+    &.collapse {
+        grid-template-columns: $width-sidebar-collapse calc(
+                100vw - $width-sidebar-collapse
+            );
+
+        #sidebar {
+            width: $width-sidebar-collapse;
+
+            .sidebar__header {
+                justify-content: center;
+
+                h2 {
+                    display: none;
+                }
+                button img {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .channel__item {
+                justify-content: center;
+
+                &--info,
+                &--views {
+                    display: none;
+                }
+            }
+        }
+
+        #content {
+            width: calc(100vw - $width-sidebar-collapse);
+        }
+    }
 }
 
 #nabar {
