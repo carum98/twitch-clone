@@ -1,11 +1,27 @@
-# Vue 3 + Typescript + Vite
+# <img src="https://github.com/carum98/twitch-clone/blob/main/public/favicon.svg" width="30">  <img src="https://github.com/carum98/twitch-clone/blob/main/src/assets/logo.png" width="30">
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Twitch clone** build with Vue 3 + Typescript + Vite
 
-## Recommended IDE Setup
+## SetUp
+This project use [Twitch API](https://dev.twitch.tv/)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Create ``.env``:
 
-## Type Support For `.vue` Imports in TS
+```
+TWITCH_URL=https://api.twitch.tv/helix
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+CLIENT_ID=[CLIENT_ID]
+CLIENT_SECRET=[CLIENT_SECRET]
+```
+
+## Video
+https://user-images.githubusercontent.com/40967143/147803256-635b22e8-1f6b-494e-8062-60a626520193.mp4
+
+## Screenshots
+![](https://github.com/carum98/twitch-clone/blob/main/screenshot/dashboard.png)
+
+![](https://github.com/carum98/twitch-clone/blob/main/screenshot/dashboard_2.png)
+
+![](https://github.com/carum98/twitch-clone/blob/main/screenshot/dashboard_3.png)
+
+![](https://github.com/carum98/twitch-clone/blob/main/screenshot/stream.png)
