@@ -1,0 +1,121 @@
+.stream-page {
+    display: flex;
+    height: 100%;
+    margin-top: 5px;
+
+    iframe {
+        width: 100%;
+
+        border: none;
+    }
+
+    &__content {
+        width: 70%;
+        background: #0e0e0f;
+        height: 100%;
+        overflow-y: scroll;
+
+        #stream_player {
+            height: 600px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        gap: 20px;
+
+        padding: 30px;
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 3px solid $brand;
+        }
+
+        span {
+            position: absolute;
+
+            bottom: 0;
+            left: 30%;
+            text-align: center;
+
+            background: red;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 0 5px;
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+
+        &--name {
+            font-weight: bold;
+        }
+
+        &--title {
+            font-weight: bold;
+        }
+
+        &--game {
+            color: #bf95ff;
+            margin-right: 15px;
+        }
+    }
+
+    &__actions {
+        button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            border: none;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .btn-follow {
+            background: $brand;
+        }
+        .btn-suscribe {
+            background: #323234;
+        }
+
+        .viewers {
+            font-weight: bold;
+            color: #ff8280;
+        }
+
+        .btn-icon {
+            background: transparent;
+        }
+    }
+
+    &__about {
+        background: $bg-nav;
+        margin: 30px;
+        padding: 50px;
+    }
+
+    #chat_embed {
+        width: 30%;
+        height: 100%;
+    }
+}

@@ -6,6 +6,11 @@ const routes = [
         component: () => import('../pages/MainDashboard.vue'),
         name: 'dashboard',
     },
+    {
+        path: '/:name',
+        component: () => import('../pages/StreamPage.vue'),
+        name: 'stream',
+    },
 ]
 
 const router = createRouter({

@@ -12,10 +12,9 @@ defineProps({
 </script>
 
 <template>
-    <a
+    <router-link
         class="stream__item"
-        :href="`https://www.twitch.tv/${stream.channel_name}`"
-        target="_blank">
+        :to="{ name: 'stream', params: { name: stream.channel_name } }">
         <div class="stream__item--thumbnail">
             <span>Live</span>
             <span>{{ formatViews(stream.viewers) }} viewers</span>
@@ -30,5 +29,5 @@ defineProps({
             </div>
         </div>
         <TagsList class="stream__item--tags" :tags="stream.tags" />
-    </a>
+    </router-link>
 </template>

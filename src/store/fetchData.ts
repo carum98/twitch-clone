@@ -18,3 +18,9 @@ export const fetchData = async () => {
     const response1 = await getGames()
     games.value = response1
 }
+
+export const fetchStream = async (channel: string): Promise<IStream> => {
+    return streams.value.find(
+        (item: IStream) => item.channel.name === channel
+    ) as IStream
+}

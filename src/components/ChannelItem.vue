@@ -11,7 +11,9 @@ defineProps({
 </script>
 
 <template>
-    <a class="channel__item">
+    <router-link
+        :to="{ name: 'stream', params: { name: channel.name } }"
+        class="channel__item">
         <img :src="channel.thumbnail" />
 
         <div class="channel__item--info">
@@ -22,5 +24,5 @@ defineProps({
         <span class="channel__item--views">
             {{ formatViews(channel.viewers) }}
         </span>
-    </a>
+    </router-link>
 </template>

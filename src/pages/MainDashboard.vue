@@ -7,21 +7,29 @@ import StreamCarrousel from '../components/StreamCarrousel.vue'
 </script>
 
 <template>
-    <StreamCarrousel v-if="streams.length" :streams="streams.slice(1, 6)" />
+    <section class="main_dashboard">
+        <StreamCarrousel v-if="streams.length" :streams="streams.slice(1, 6)" />
 
-    <StreamList
-        :streams="streams.slice(0, 5)"
-        title="Live channels we think you’ll like" />
+        <StreamList
+            :streams="streams.slice(0, 5)"
+            title="Live channels we think you’ll like" />
 
-    <StreamList
-        :streams="streams.slice(5, 10)"
-        title="All aboard the Hype Train!" />
+        <StreamList
+            :streams="streams.slice(5, 10)"
+            title="All aboard the Hype Train!" />
 
-    <GamesList />
+        <GamesList />
 
-    <CategoriesButtons />
+        <CategoriesButtons />
 
-    <StreamList
-        :streams="streams.slice(10, 15)"
-        title="All aboard the Hype Train!" />
+        <StreamList
+            :streams="streams.slice(10, 15)"
+            title="All aboard the Hype Train!" />
+    </section>
 </template>
+
+<style>
+.main_dashboard {
+    padding: 30px;
+}
+</style>

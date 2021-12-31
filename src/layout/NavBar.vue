@@ -6,7 +6,7 @@ import DropdownMore from '../components/DropdownMore.vue'
     <header id="navbar">
         <section>
             <img src="/favicon.svg" alt="Twitch Clone" width="28" height="28" />
-            <a>Browse</a>
+            <router-link :to="{ name: 'dashboard' }">Browse</router-link>
 
             <DropdownMore />
         </section>
