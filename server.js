@@ -34,7 +34,9 @@ app.get('/api/streams', async (req, res) => {
     })
 
     const ids = data.data.map((stream) => stream.user_id)
-    const codes = data.data.map((stream) => stream.tag_ids).flat(1)
+    const codes = [
+        ...new Set(data.data.map((stream) => stream.tag_ids).flat(1)),
+    ]
 
     const channels = await getUsersInfo(ids)
     const tags = await getTags(codes)
