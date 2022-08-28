@@ -14,6 +14,11 @@ CLIENT_ID=[CLIENT_ID]
 CLIENT_SECRET=[CLIENT_SECRET]
 ```
 
+With Docker
+```bash
+docker run -d --env TWITCH_URL=[TWITCH_URL] --env CLIENT_ID=[CLIENT_ID] --env CLIENT_SECRET=[CLIENT_SECRET] --env PORT=8080 -p 8080:8080 -p 3000:3000 ghcr.io/carum98/twitch-clone:[tag]
+```
+
 ## Video
 https://user-images.githubusercontent.com/40967143/147803256-635b22e8-1f6b-494e-8062-60a626520193.mp4
 
