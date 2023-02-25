@@ -17,14 +17,14 @@ watch(
         stream.value = await fetchStream(newId as string)
     }
 )
+const domain = import.meta.env.VITE_DOMAIN_NAME
 </script>
 
 <template>
     <section class="stream-page">
         <div class="stream-page__content">
-            <iframe
-                id="stream_player"
-                :src="`https://player.twitch.tv/?channel=${route.params.name}&parent=localhost&muted=true`"
+            <iframe id="stream_player"
+                :src="`https://player.twitch.tv/?channel=${route.params.name}&parent=${domain}&muted=true`"
                 allowfullscreen="true">
             </iframe>
 
@@ -88,11 +88,8 @@ watch(
             </section>
         </div>
 
-        <iframe
-            id="chat_embed"
-            :src="`https://www.twitch.tv/embed/${route.params.name}/chat?darkpopout&parent=localhost`"
-            height="500"
-            width="350">
+        <iframe id="chat_embed" :src="`https://www.twitch.tv/embed/${route.params.name}/chat?darkpopout&parent=${domain}`"
+            height="500" width="350">
         </iframe>
     </section>
 </template>
