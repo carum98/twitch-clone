@@ -9,12 +9,13 @@ defineProps({
         required: true,
     },
 })
+
+const domain = import.meta.env.VITE_DOMAIN_NAME
 </script>
 
 <template>
     <section class="carrousel__active">
-        <iframe
-            :src="`https://player.twitch.tv/?channel=${stream.channel_name}&parent=localhost&muted=true`"
+        <iframe :src="`https://player.twitch.tv/?channel=${stream.channel_name}&parent=${domain}&muted=true`"
             allowfullscreen="true">
         </iframe>
         <div>
