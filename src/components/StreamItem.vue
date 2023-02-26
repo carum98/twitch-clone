@@ -12,16 +12,14 @@ defineProps({
 </script>
 
 <template>
-    <router-link
-        class="stream__item"
-        :to="{ name: 'stream', params: { name: stream.channel_name } }">
+    <router-link class="stream__item" :to="{ name: 'stream', params: { name: stream.channel_name } }">
         <div class="stream__item--thumbnail">
             <span>Live</span>
             <span>{{ formatViews(stream.viewers) }} viewers</span>
             <img :src="stream.thoumbnail" />
         </div>
         <div class="stream__item--info">
-            <img :src="stream.channel.thumbnail" />
+            <img :src="stream.channel.thumbnail" height="40" width="40" />
             <div>
                 <p>{{ stream.title }}</p>
                 <p>{{ stream.channel.name }}</p>

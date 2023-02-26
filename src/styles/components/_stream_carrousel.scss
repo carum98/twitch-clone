@@ -44,6 +44,7 @@
         &--info {
             display: flex;
             margin-bottom: 1rem;
+            gap: 10px;
 
             img {
                 border-radius: 50%;
@@ -54,6 +55,7 @@
             p:nth-child(1),
             p:nth-child(2) {
                 color: $brand;
+                font-size: 15px;
             }
         }
     }
